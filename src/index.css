@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'netflix-sans';
+  src: url('./assets/font/NetflixSansBold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'netflix-sans-md';
+  src: url('./assets/font/NetflixSansMedium.ttf') format('truetype'),
+}
+@font-face {
+  font-family: 'netflix-sans-reg';
+  src: url('./assets/font/NetflixSansRegular.ttf') format('truetype'),
+}
