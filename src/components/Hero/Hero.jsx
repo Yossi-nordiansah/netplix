@@ -25,7 +25,7 @@ const Hero = () => {
     }
 
     return (
-        <div className='overflow-hidden relative border-b-zinc-800 border-b-[9px]'>
+        <div className='overflow-hidden relative border-b-zinc-800 border-b-[10px]'>
             <Navbar/>
             <div className='w-[75%] px-1 absolute left-1/2 -translate-x-1/2 z-10 top-[278px]'>
                 <h1 className='text-white text-[54px] leading-[69px] font-bolder text-center font-netflix'>Film, acara TV tak terbatas, dan banyak lagi</h1>
@@ -37,7 +37,7 @@ const Hero = () => {
                     <a href="" className='text-white flex h-16 bg-[#e60000] w-[25%] place-items-center gap-2 text-[25px] justify-center rounded-lg font-bold'>Mulai <img src="arrow.svg" alt="" /></a>
                 </div>
             </div>
-            <img src={bghero} alt="" className='scale-125 -translate-y-[13%] object-cover' />
+            <img src={bghero} alt="" className='scale-125 -translate-y-[12%] object-cover' />
             <div style={bggradient} className='absolute top-0 bottom-0 right-0 left-0'></div>
         </div>
     )
