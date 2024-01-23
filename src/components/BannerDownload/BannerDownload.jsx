@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import mobileimg from '../../assets/image/mobile.jpg';
 
 const BannerDownload = () => {
   return (
     <div className='py-[90px] border-b-[9px] border-b-zinc-800 text-white bg-black'>
       <div className='w-[80%] flex mx-auto justify-cente flex-col sm:flex-row'>
         <div className='relative w-[50%]'>
-          <img src="src\assets\image\mobile.jpg" alt="" className='-mt-6 mx-auto w-[87%]' />
+          <img src={mobileimg} alt="" className='-mt-6 mx-auto w-[87%]' />
           <div className='absolute left-1/2 -translate-x-1/2 border border-zinc-600 '></div>
         </div>
         <div className='w-[50%]'>

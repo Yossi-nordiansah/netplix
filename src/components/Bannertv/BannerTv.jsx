@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import tvimg from '../../assets/image/tv.png';
+import tvvideo from '../../assets/video/video-tv-0819.mp4';
 
 const BannerTv = () => {
     return (
@@ -11,8 +13,8 @@ const BannerTv = () => {
                     </p>
                 </div>
                 <div className='relative w-[50%] '>
-                    <video src="src\assets\video\video-tv-0819.mp4" loop controls autoPlay className='w-[376px] h-64 -mt-7 ml-[65px] absolute'></video>
-                    <img src="src\assets\image\tv.png" alt="" className='absolute w-[520px] -top-20'/>
+                    <video src={tvvideo} loop autoPlay className='w-[376px] h-64 -mt-7 ml-[65px] absolute'></video>
+                    <img src={tvimg} alt="" className='absolute w-[520px] -top-20'/>
                 </div>
             </div>
         </div>
