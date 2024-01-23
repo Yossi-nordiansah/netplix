@@ -13,7 +13,7 @@ const BannerTv = () => {
                     </p>
                 </div>
                 <div className='relative w-[50%] '>
-                    <video src={tvvideo} loop autoPlay className='w-[376px] h-64 -mt-7 ml-[65px] absolute'></video>
+                    <video src={tvvideo} loop autoPlay muted className='w-[376px] h-64 -mt-7 ml-[68px] absolute'></video>
                     <img src={tvimg} alt="" className='absolute w-[520px] -top-20'/>
                 </div>
             </div>
