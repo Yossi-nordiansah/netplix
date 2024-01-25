@@ -9,7 +9,7 @@ const Navbar = () => {
                 <div className='flex gap-6 items-center justify-between'>
                     <div className={`flex rounded-md relative text-white py-[2px] px-[2px]`}>
                         <img src={language} alt="" className='w-[17px] absolute left-4 top-1/2 -translate-y-1/2' />
-                        <select name="" id="" className='bg-slate-400/5 focus:outline-2 appearance-none focus:outline-white focus:outline-offset-[3px] font-bold outline-none pl-10 pr-10 w-66 border border-slate-500 py-[3px] rounded-md text-lg'>
+                        <select name="" id="" className='bg-slate-400/5 focus:outline-2 appearance-none focus:outline-white focus:outline-offset-[3px] outline-none pl-10 pr-10 w-66 border border-slate-500 py-[3px] rounded-md text-lg'>
                             <option value="" selected className='text-black block'>Bahasa Indonesia</option>
                             <option value="" className='text-black block'>English</option>
                         </select>

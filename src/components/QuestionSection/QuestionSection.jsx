@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import logo from '../../assets/image/logo.png';
+import language from '/language.svg';
 
 const QuestionSection = () => {
 
@@ -64,9 +66,9 @@ const QuestionSection = () => {
     const [open, setOpen] = useState(false);
 
     const handleQuestionOnClick = (id) => {
-            if (questionsList.find((items) => items.id === id)) {
-                setQuestionsList(questionsList.map((item) => (item.id === id ? { ...item, action: !item.action } : { ...item, action: false })));
-            }
+        if (questionsList.find((items) => items.id === id)) {
+            setQuestionsList(questionsList.map((item) => (item.id === id ? { ...item, action: !item.action } : { ...item, action: false })));
+        }
     }
 
     return (
@@ -74,7 +76,7 @@ const QuestionSection = () => {
             <h1 className='text-[54px] font-netflix text-center '>Tanya Jawab Umum</h1>
 
             {/* pertanyaan */}
-            <div className='absolute bg-black pb-[64px] border-b-zinc-800'>
+            <div className='absolute bg-black pb-[64px]'>
                 <div className='w-[76%] mx-auto mt-4'>
                     {
                         questionsList.map((item) =>
@@ -85,7 +87,7 @@ const QuestionSection = () => {
                                     <img src="public/plus.svg" alt="" className={`${item.action ? 'rotate-45 duration-100' : 'rotate-90 duration-100'}`} />
                                 </div>
                                 <div className={`px-8 z-10 duration-300 overflow-hidden mt-[2px] bg-[#333333]`}>
-                                    <p className={` ${item.action? 'h-fit my-7' : 'h-0'} duration-300 leading-9 whitespace-pre-line text-[27px]`}>
+                                    <p className={` ${item.action ? 'h-fit my-7' : 'h-0'} duration-300 leading-9 whitespace-pre-line text-[27px]`}>
                                         {item.answer}
                                     </p>
                                 </div>
@@ -98,6 +100,53 @@ const QuestionSection = () => {
                         <p ref={inputRef} onClick={handlePlaceHolderOnFocused} className='absolute font-netflixrg font-semibold text-[18px] duration-300 text-gray-400 top-[17px] left-4'>Alamat email</p>
                         <input onFocus={handleInputOnFocus} ref={focusRef} onBlur={handleInputOnBlur} className='bg-black/50 pt-6 pb-2 text-lg text-white border px-4 border-gray-400 outline-offset-[3px] rounded-md w-[75%]' type="email" />
                         <a href="" className='text-white flex h-16 bg-[#e60000] w-[25%] place-items-center gap-2 text-[25px] justify-center rounded-lg font-bold'>Mulai <img src="arrow.svg" alt="" /></a>
+                    </div>
+                </div>
+                <div className='pt-16 border-t-[9px] border-t-zinc-800 mt-16'>
+                    <div className='w-[76%] mx-auto'>
+                        <p className='text-zinc-400 text-[21px] font-netflixrg'>Ada pertanyaan? Hubungi  <u>0856-5523-0897</u></p>
+                        <div className='mt-5 flex gap-[95px]'>
+                            <div className='underline font-netflixrg flex gap-[95px] text-zinc-400'>
+                                <ul>
+                                    <li className='mb-3 cursor-pointer'>Tanya Jawab</li>
+                                    <li className='mb-3 cursor-pointer'>Hubungan Investor</li>
+                                    <li className='mb-3 cursor-pointer'>Cara Menonton</li>
+                                    <li className='mb-3 cursor-pointer'>Informasi Perusahaan</li>
+                                    <li className='cursor-pointer'>Hanya di Netflix</li>
+                                </ul>
+                                <ul>
+                                    <li className='mb-3 cursor-pointer'>Pusat Bantuan</li>
+                                    <li className='mb-3 cursor-pointer'>Lowongan Kerja</li>
+                                    <li className='mb-3 cursor-pointer'>Ketentuan Penggunaan</li>
+                                    <li className='cursor-pointer'>Hubungi Kami</li>
+                                </ul>
+                            </div>
+                            <div className='underline font-netflixrg flex gap-[90px] text-zinc-400'>
+                                <ul>
+                                    <li className='mb-3 cursor-pointer'>Akun</li>
+                                    <li className='mb-3 cursor-pointer'>Tukar Kartu Hadiah</li>
+                                    <li className='mb-3 cursor-pointer'>Privasi</li>
+                                    <li className='cursor-pointer'>Uji Kecepatan</li>
+                                </ul>
+                                <ul>
+                                    <li className='mb-3 cursor-pointer'>Pusat Media</li>
+                                    <li className='mb-3 cursor-pointer'>Beli Kartu Hadiah</li>
+                                    <li className='mb-3 cursor-pointer'>Preferensi Cookie</li>
+                                    <li className='cursor-pointer'>Informasi Legal</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={`flex rounded-md mt-7 relative text-white w-[225px] py-[2px] px-[2px]`}>
+                            <img src={language} alt="" className='w-[17px] absolute left-4 top-1/2 -translate-y-1/2' />
+                            <select name="" id="" className='bg-slate-400/5 focus:outline-2 appearance-none focus:outline-white focus:outline-offset-[3px] outline-none pl-10 pr-10 w-66 border border-slate-500 py-[3px] rounded-md text-lg'>
+                                <option value="" selected className='text-black block'>Bahasa Indonesia</option>
+                                <option value="" className='text-black block'>English</option>
+                            </select>
+                            <div className="pointer-events-none absolute inset-y-0 top-[3px] right-2 flex items-center px-2 text-gray-700">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="default-ltr-cache-4z3qvp e1svuwfo1" data-name="CaretDown" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.5976 6.5C11.7461 6.5 11.8204 6.67956 11.7154 6.78457L8.23574 10.2643C8.10555 10.3945 7.89445 10.3945 7.76425 10.2643L4.28457 6.78457C4.17956 6.67956 4.25393 6.5 4.40244 6.5H11.5976Z" fill="white"></path></svg>
+                            </div>
+                        </div>
+                        <p className='text-zinc-400 font-netflixrg  mt-7'>Netflix Indoneisa</p>
                     </div>
                 </div>
             </div>
