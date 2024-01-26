@@ -105,7 +105,7 @@ const QuestionSection = () => {
                 <div className='pt-16 border-t-[9px] border-t-zinc-800 mt-16'>
                     <div className='w-[76%] mx-auto'>
                         <p className='text-zinc-400 text-[21px] font-netflixrg'>Ada pertanyaan? Hubungi  <u>0856-5523-0897</u></p>
-                        <div className='mt-5 flex gap-[95px]'>
+                        <div className='mt-5 flex sm:flex-row flex-col gap-[95px]'>
                             <div className='underline font-netflixrg flex gap-[95px] text-zinc-400'>
                                 <ul>
                                     <li className='mb-3 cursor-pointer'>Tanya Jawab</li>

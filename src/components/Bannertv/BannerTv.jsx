@@ -4,7 +4,7 @@ import tvvideo from '../../assets/video/video-tv-0819.mp4';
 
 const BannerTv = () => {
     return (
-        <div className='py-[175px] border-b-[9px] border-b-zinc-800 text-white bg-black'>
+        <div className='sm:py-[175px] py-8 border-b-[9px] border-b-zinc-800 text-white bg-black'>
             <div className='w-[75%] flex mx-auto justify-center gap-9 flex-col sm:flex-row'>
                 <div className='w-[50%]'>
                     <h1 className='font-netflix text-[54px]'>Nikmati di TV-mu</h1>

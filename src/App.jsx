@@ -10,14 +10,14 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='w-full mx-auto'>
       <Hero/>
-      <BannerTv/>
+      {/* <BannerTv/>
       <BannerDownload/>
       <BannerStreaming/>
       <BannerKids/>
-      <QuestionSection/>
-    </>
+      <QuestionSection/> */}
+    </div>
   )
 }
 
