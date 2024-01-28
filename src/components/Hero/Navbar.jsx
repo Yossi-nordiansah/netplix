@@ -13,8 +13,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='sm:w-[77%] w-[90%] mx-auto flex items-center justify-between'>
-            <img src={logo} alt="" className='sm:w-[19%] w-[31%] sm:-mt-3 -ml-[10px]' />
+        <nav className='sm:w-[77%] w-[85%] sm:mt-0 pt-2 mx-auto flex items-center justify-between'>
+            <img src={logo} alt="" className='sm:w-[19%] w-[33%] sm:-mt-3 -ml-[10px]' />
             <div className='flex sm:gap-6 gap-2 items-center sm:justify-between justify-center'>
                 <div onClick={handleOnFocused} className={`flex rounded-md relative text-white py-[2px] px-[2px] sm:w-[100%]`}>
                     <label htmlFor="language">
