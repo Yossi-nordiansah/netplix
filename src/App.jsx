@@ -13,7 +13,7 @@ function App() {
     <div className='w-full mx-auto'>
       <Hero/>
       <BannerTv/>
-      {/* <BannerDownload/> */}
+      <BannerDownload/>
       {/* <BannerStreaming/>
       <BannerKids/>
       <QuestionSection/> */}
