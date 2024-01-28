@@ -10,7 +10,7 @@ const Hero = () => {
     const handleInputOnFocus = () => {
         if(window.screen.availWidth  <= 640){
             inputRef.current.style.fontSize = '12px';
-            inputRef.current.style.top = '2px';
+            inputRef.current.style.top = '3px';
         }
         else if(window.screen.availWidth >640){
             inputRef.current.style.fontSize = '13px';
@@ -51,7 +51,7 @@ const Hero = () => {
                     <p className='text-center mx-auto text-white sm:text-[22px] text-[18px] sm:w-full w-[90%] font-netflixrg mt-[19px]'>Siap menonton? Masukkan email untuk membuat atau memulai lagi keanggotaanmu.</p>
                     <div className='flex sm:flex-row flex-col items-center justify-between relative mx-auto mt-5 sm:w-[62%] w-[90%] sm:gap-2 gap-4'>
                         <p ref={inputRef} onClick={handlePlaceHolderOnFocused} className='font-netflixrg absolute font-semibold text-[16px] duration-300 text-gray-400 sm:top-[17px] top-[13px] left-4'>Alamat email</p>
-                        <input onFocus={handleInputOnFocus} ref={focusRef} onBlur={handleInputOnBlur} className='bg-black/30 sm:pt-6 pt-5 sm:pb-2 pb-1 sm:text-lg text-[16px] text-white border px-4 border-gray-400 outline-offset-[3px] sm:rounded-md rounded-[4px] w-[100%]' type="email" />
+                        <input onFocus={handleInputOnFocus} ref={focusRef} onBlur={handleInputOnBlur} className='bg-black/50 sm:pt-6 pt-5 sm:pb-2 pb-1 sm:text-lg text-[16px] text-white border px-4 border-gray-400 outline-offset-[3px] sm:rounded-md rounded-[4px] w-[100%]' type="email" />
                         <a href="" className='text-white flex sm:py-3 py-2 bg-[#e60000] sm:px-7 px-4 place-items-center gap-2 sm:text-[25px] text-[20px] justify-center sm:rounded-lg rounded-[4px] sm:font-bold font-semibold'>Mulai <img src="arrow.svg" alt="" /></a>
                     </div>
                 </div>
