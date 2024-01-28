@@ -12,8 +12,8 @@ function App() {
   return (
     <div className='w-full mx-auto'>
       <Hero/>
-      {/* <BannerTv/>
-      <BannerDownload/>
+      <BannerTv/>
+      {/* <BannerDownload/>
       <BannerStreaming/>
       <BannerKids/>
       <QuestionSection/> */}

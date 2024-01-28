@@ -42,8 +42,8 @@ const Hero = () => {
     }
 
     return (
-        <div className=' bg-no-repeat bg-center bg-cover' style={{ backgroundImage: `url(${bghero})` }}>
-            <div style={bggradient} className='w-full border-b-zinc-800 border-b-[10px]'>
+        <div className=' bg-no-repeat bg-center bg-cover border-b-zinc-800 border-b-[10px]' style={{ backgroundImage: `url(${bghero})` }}>
+            <div style={bggradient} className='w-full -mb-[1px]'>
                 <Navbar />
                 <div className='sm:w-[75%] w-[85%] mx-auto z-10 sm:mt-44 mt-14 sm:pb-44 pb-9'>
                     <h1 className='text-white sm:text-[54px] text-3xl sm:leading-[69px] font-bolder text-center font-netflix'>Film, acara TV tak terbatas, dan banyak lagi</h1>
@@ -52,7 +52,7 @@ const Hero = () => {
                     <div className='flex sm:flex-row flex-col items-center justify-between relative mx-auto mt-5 sm:w-[62%] w-[90%] sm:gap-2 gap-4'>
                         <p ref={inputRef} onClick={handlePlaceHolderOnFocused} className='font-netflixrg absolute font-semibold text-[16px] duration-300 text-gray-400 sm:top-[17px] top-[13px] left-4'>Alamat email</p>
                         <input onFocus={handleInputOnFocus} ref={focusRef} onBlur={handleInputOnBlur} className='bg-black/30 sm:pt-6 pt-5 sm:pb-2 pb-1 sm:text-lg text-[16px] text-white border px-4 border-gray-400 outline-offset-[3px] sm:rounded-md rounded-[4px] w-[100%]' type="email" />
-                        <a href="" className='text-white flex sm:py-3 py-2 bg-[#e60000] sm:px-7 px-4 place-items-center gap-2 sm:text-[25px] text-[20px] justify-center rounded-lg sm:font-bold font-semibold'>Mulai <img src="arrow.svg" alt="" /></a>
+                        <a href="" className='text-white flex sm:py-3 py-2 bg-[#e60000] sm:px-7 px-4 place-items-center gap-2 sm:text-[25px] text-[20px] justify-center sm:rounded-lg rounded-[4px] sm:font-bold font-semibold'>Mulai <img src="arrow.svg" alt="" /></a>
                     </div>
                 </div>
             </div>
