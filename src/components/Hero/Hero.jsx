@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef  } from 'react';
 import bghero from '../../assets/image/bg.jpg';
 import Navbar from './Navbar';
 
@@ -32,11 +32,6 @@ const Hero = () => {
         focusRef.current.focus();
     }
 
-    useEffect(()=>{
-        console.log(window.screen.availWidth);
-        console.log(window.screen.width);
-    },[])
-
     const bggradient = {
         background: 'linear-gradient(to top, rgba(0,0,0,.9) 0, rgba(0,0,0,.4) 60%, rgba(0,0,0,.9)) 100%',
     }
@@ -57,41 +52,8 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        // <div className='w-[80%] mx-auto h-20 bg-red-600'>ABCDE</div>
     )
 }
 
 export default Hero;
 
-// import React, { useState, useEffect } from 'react';
-// import './App.css';
-
-// function App() {
-//   const [isResponsive, setResponsive] = useState(false);
-
-//   const handleResize = () => {
-//     if (window.innerWidth <= 600) {
-//       setResponsive(true);
-//     } else {
-//       setResponsive(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     handleResize(); // Panggil fungsi pertama kali
-//     window.addEventListener('resize', handleResize);
-
-//     return () => {
-//       window.removeEventListener('resize', handleResize);
-//     };
-//   }, []);
-
-//   return (
-//     <div className={isResponsive ? 'responsive' : ''}>
-//       <h1>Responsive Design with React</h1>
-//       <p>This is a simple responsive React app.</p>
-//     </div>
-//   );
-// }
-
-// export default App;
