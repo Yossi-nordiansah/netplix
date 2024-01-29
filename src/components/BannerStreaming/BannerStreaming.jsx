@@ -13,7 +13,7 @@ const BannerStreaming = () => {
             </p>
         </div>
         <div className='relative sm:w-[50%] sm:mx-0 mx-auto w-[90%] sm:mt-0 mt-2'>
-            <video src={devicevideo} loop autoPlay muted className='sm:w-[376px] w-[58%] sm:h-[110%]  sm:-mt-7 mt-6 ml-[68px] absolute'></video>
+            <video src={devicevideo} loop autoPlay muted className='sm:w-[376px] w-[58%] sm:h-[110%] sm:-mt-7 mt-6 ml-[68px] absolute'></video>
             <img src={deviceimg} alt="" className='absolute w-[100%] sm:-top-20'/>
         </div>
     </div>
