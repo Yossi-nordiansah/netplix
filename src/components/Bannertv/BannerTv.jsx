@@ -12,9 +12,9 @@ const BannerTv = () => {
                         Tonton di Smart TV, Playstation, Xbox, Chromecast, Apple TV, pemutar Blu-ray, dan banyak lagi.
                     </p>
                 </div>
-                <div className='relative lg:w-[50%] w-full h-fit sm:mt-16'>
-                    <video src={tvvideo} loop autoPlay muted className='lg:w-[376px] w-[74%] lg:-mt-7 sm:mt-5 mt-10 sm:ml-[68px] ml-10 absolute'></video>
-                    <img src={tvimg} alt="" className='absolute lg:w-[520px] sm:w-[90%] sm:left-1/2 sm:-translate-x-1/2 w-full sm:-top-20 -top-2'/>
+                <div className='relative lg:w-[50%] w-full h-fit lg:-mt-16'>
+                    <video src={tvvideo} loop autoPlay muted className='lg:w-[376px] w-[74%] lg:-mt-0 sm:mt-16 mt-10 sm:ml-[68px] ml-10 absolute'></video>
+                    <img src={tvimg} alt="" className='absolute lg:w-[520px] sm:w-[90%] sm:left-1/2 sm:-translate-x-1/2 w-full lg:-top-20 -top-2'/>
                 </div>
             </div>
         </div>
