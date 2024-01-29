@@ -1,7 +1,7 @@
 import React from 'react';
 import deviceimg from "../../assets/image/device.png";
 import devicevideo from "/src/assets/video/video-devices-id.mp4"
-
+ 
 const BannerStreaming = () => {
   return (
     <div className='lg:py-[190px] sm:pt-16 pt-11 sm:pb-[600px] py-72 border-b-[9px] border-b-zinc-800 text-white bg-black'>

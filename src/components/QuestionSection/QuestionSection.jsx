@@ -8,12 +8,24 @@ const QuestionSection = () => {
     const focusRef = useRef();
 
     const handleInputOnFocus = () => {
-        inputRef.current.style.fontSize = '13px';
-        inputRef.current.style.top = '9px';
+        if(window.screen.availWidth <= 640){
+            inputRef.current.style.fontSize = '12px';
+            inputRef.current.style.top = '3px';
+        }
+        else if(window.screen.availWidth >640){
+            inputRef.current.style.fontSize = '13px';
+            inputRef.current.style.top = '9px';
+        }
     }
     const handleInputOnBlur = () => {
-        inputRef.current.style.fontSize = '18px';
-        inputRef.current.style.top = '17px';
+        if(window.screen.availWidth <= 640){
+            inputRef.current.style.fontSize = '16px';
+            inputRef.current.style.top = '13px';
+        }
+        else if(window.screen.availWidth >640){
+            inputRef.current.style.fontSize = '18px';
+            inputRef.current.style.top = '17px';
+        }
     }
 
     const handlePlaceHolderOnFocused = () => {
@@ -72,22 +84,22 @@ const QuestionSection = () => {
     }
 
     return (
-        <div className='py-16 border-b-[9px] relative text-white bg-black'>
-            <h1 className='text-[54px] font-netflix text-center '>Tanya Jawab Umum</h1>
+        <div className='lg:py-16 py-12 border-b-[9px] relative text-white bg-black'>
+            <h1 className='lg:text-[54px] text-[33px] font-netflix text-center '>Tanya Jawab Umum</h1>
 
             {/* pertanyaan */}
             <div className='absolute bg-black pb-[64px]'>
-                <div className='w-[76%] mx-auto mt-4'>
+                <div className='lg:w-[76%] sm:w-[93%] w-[88%] mx-auto lg:mt-4 sm:mt-8 mt-6'>
                     {
                         questionsList.map((item) =>
                         (
                             <div key={item.id} className={`mb-2 duration-300 `}>
-                                <div onClick={() => handleQuestionOnClick(item.id)} className=' flex justify-between items-center w-full px-8 py-7 bg-[#333333]'>
-                                    <p className='text-[27px]'>{item.question}</p>
-                                    <img src="public/plus.svg" alt="" className={`${item.action ? 'rotate-45 duration-100' : 'rotate-90 duration-100'}`} />
+                                <div onClick={() => handleQuestionOnClick(item.id)} className=' flex justify-between items-center w-full lg:px-8 px-6 lg:py-7 py-6 bg-[#333333]'>
+                                    <p className='sm:text-[27px] text-[18px]'>{item.question}</p>
+                                    <img src="public/plus.svg" alt="" className={`${item.action ? 'rotate-45 duration-100' : 'rotate-90 duration-100'} sm:w-10 w-7`} />
                                 </div>
-                                <div className={`px-8 z-10 duration-300 overflow-hidden mt-[2px] bg-[#333333]`}>
-                                    <p className={` ${item.action ? 'h-fit my-7' : 'h-0'} duration-300 leading-9 whitespace-pre-line text-[27px]`}>
+                                <div className={`sm:px-8 px-6 z-10 duration-300 overflow-hidden mt-[2px] bg-[#333333]`}>
+                                    <p className={` ${item.action ? 'h-fit my-7' : 'h-0'} duration-300 sm:text-[27px] text-[18px] sm:leading-9 leading-5 whitespace-pre-line `}>
                                         {item.answer}
                                     </p>
                                 </div>
@@ -95,18 +107,18 @@ const QuestionSection = () => {
                         )
                         )
                     }
-                    <p className='text-center text-white text-[22px] font-netflixrg mt-14'>Siap menonton? Masukkan email untuk membuat atau memulai lagi keanggotaanmu.</p>
-                    <div className='flex justify-between relative mx-auto mt-5 w-[62%] gap-2'>
-                        <p ref={inputRef} onClick={handlePlaceHolderOnFocused} className='absolute font-netflixrg font-semibold text-[18px] duration-300 text-gray-400 top-[17px] left-4'>Alamat email</p>
-                        <input onFocus={handleInputOnFocus} ref={focusRef} onBlur={handleInputOnBlur} className='bg-black/50 pt-6 pb-2 text-lg text-white border px-4 border-gray-400 outline-offset-[3px] rounded-md w-[75%]' type="email" />
-                        <a href="" className='text-white flex h-16 bg-[#e60000] w-[25%] place-items-center gap-2 text-[25px] justify-center rounded-lg font-bold'>Mulai <img src="arrow.svg" alt="" /></a>
+                    <p className='text-center sm:w-full w-[85%] sm:ml-0 mx-auto text-white sm:text-[22px] text-[18px] font-netflixrg sm:mt-14 mt-12'>Siap menonton? Masukkan email untuk membuat atau memulai lagi keanggotaanmu.</p>
+                    <div className='flex sm:flex-row flex-col sm:justify-between items-center justify-center relative mx-auto mt-5 lg:w-[62%] w-[80%] gap-2'>
+                        <p ref={inputRef} onClick={handlePlaceHolderOnFocused} className='font-netflixrg absolute font-semibold text-[16px] duration-300 text-gray-400 sm:top-[17px] top-[13px] left-4'>Alamat email</p>
+                        <input onFocus={handleInputOnFocus} ref={focusRef} onBlur={handleInputOnBlur} className='bg-black/50 sm:pt-6 pt-5 sm:pb-2 pb-1 sm:text-lg text-[16px] text-white border px-4 border-gray-400 outline-offset-[3px] sm:rounded-md rounded-[4px] w-[100%]' type="email" />
+                        <a href="" className='text-white flex sm:py-3 py-2 bg-[#e60000] sm:px-7 px-4 place-items-center gap-2 sm:text-[25px] text-[20px] justify-center sm:rounded-lg rounded-[4px] sm:font-bold font-semibold'>Mulai <img src="arrow.svg" alt="" /></a>
                     </div>
                 </div>
-                <div className='pt-16 border-t-[9px] border-t-zinc-800 mt-16'>
-                    <div className='w-[76%] mx-auto'>
-                        <p className='text-zinc-400 text-[21px] font-netflixrg'>Ada pertanyaan? Hubungi  <u>0856-5523-0897</u></p>
-                        <div className='mt-5 flex sm:flex-row flex-col gap-[95px]'>
-                            <div className='underline font-netflixrg flex gap-[95px] text-zinc-400'>
+                <div className='sm:pt-16 pt-10 border-t-[9px] border-t-zinc-800 mt-16'>
+                    <div className='lg:w-[76%] w-[90%] mx-auto'>
+                        <p className='text-zinc-400 sm:text-[21px] text-[18px] font-netflixrg'>Ada pertanyaan? Hubungi  <u>0856-5523-0897</u></p>
+                        <div className='mt-5 flex lg:flex-row flex-col lg:gap-[95px] sm:gap-5 gap-4 sm:text-base text-sm'>
+                            <div className='underline font-netflixrg flex lg:gap-[95px] sm:gap-60 gap-12 text-zinc-400'>
                                 <ul>
                                     <li className='mb-3 cursor-pointer'>Tanya Jawab</li>
                                     <li className='mb-3 cursor-pointer'>Hubungan Investor</li>
@@ -121,7 +133,7 @@ const QuestionSection = () => {
                                     <li className='cursor-pointer'>Hubungi Kami</li>
                                 </ul>
                             </div>
-                            <div className='underline font-netflixrg flex gap-[90px] text-zinc-400'>
+                            <div className='underline font-netflixrg flex lg:gap-[90px] sm:gap-64 gap-16 text-zinc-400'>
                                 <ul>
                                     <li className='mb-3 cursor-pointer'>Akun</li>
                                     <li className='mb-3 cursor-pointer'>Tukar Kartu Hadiah</li>
@@ -146,7 +158,7 @@ const QuestionSection = () => {
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="default-ltr-cache-4z3qvp e1svuwfo1" data-name="CaretDown" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.5976 6.5C11.7461 6.5 11.8204 6.67956 11.7154 6.78457L8.23574 10.2643C8.10555 10.3945 7.89445 10.3945 7.76425 10.2643L4.28457 6.78457C4.17956 6.67956 4.25393 6.5 4.40244 6.5H11.5976Z" fill="white"></path></svg>
                             </div>
                         </div>
-                        <p className='text-zinc-400 font-netflixrg  mt-7'>Netflix Indoneisa</p>
+                        <p className='text-zinc-400 font-netflixrg mt-7'>Netflix Indoneisa</p>
                     </div>
                 </div>
             </div>

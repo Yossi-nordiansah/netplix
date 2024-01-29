@@ -15,8 +15,8 @@ function App() {
       <BannerTv/>
       <BannerDownload/>
       <BannerStreaming/>
-      {/* <BannerKids/>
-      <QuestionSection/> */}
+      <BannerKids/>
+      <QuestionSection/>
     </div>
   )
 }
