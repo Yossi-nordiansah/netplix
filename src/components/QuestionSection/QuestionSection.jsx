@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import logo from '../../assets/image/logo.png';
 import language from '/language.svg';
+import plus from '/public/plus.svg';
 
 const QuestionSection = () => {
 
@@ -96,7 +96,7 @@ const QuestionSection = () => {
                             <div key={item.id} className={`mb-2 duration-300 `}>
                                 <div onClick={() => handleQuestionOnClick(item.id)} className=' flex justify-between items-center w-full lg:px-8 px-6 lg:py-7 py-6 bg-[#333333]'>
                                     <p className='sm:text-[27px] text-[18px]'>{item.question}</p>
-                                    <img src="public/plus.svg" alt="" className={`${item.action ? 'rotate-45 duration-100' : 'rotate-90 duration-100'} sm:w-10 w-7`} />
+                                    <img src={plus} alt="" className={`${item.action ? 'rotate-45 duration-100' : 'rotate-90 duration-100'} sm:w-10 w-7`} />
                                 </div>
                                 <div className={`sm:px-8 px-6 z-10 duration-300 overflow-hidden mt-[2px] bg-[#333333]`}>
                                     <p className={` ${item.action ? 'h-fit my-7' : 'h-0'} duration-300 sm:text-[27px] text-[18px] sm:leading-9 leading-5 whitespace-pre-line `}>

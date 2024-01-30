@@ -9,7 +9,7 @@ const BannerKids = () => {
                     <img src={kidsimg} alt="" className='-mt-6 mx-auto w-full' />
                 </div>
                 <div className='lg:w-[47%] w-full'>
-                    <h1 className='font-netflix lg:text-[54px] lg:text-left text-center sm:text-4xl text-3xl leading-[65px]'>Buat profil untuk anak</h1>
+                    <h1 className='font-netflix lg:text-[54px] lg:text-left text-center sm:text-4xl text-3xl lg:leading-[65px]'>Buat profil untuk anak</h1>
                     <p className='font-netflixrg lg:text-[27px] sm:text-[21px] text-[18px] lg:text-left text-center lg:mt-6 sm:mt-6 mt-1 w-full leading-5 lg:leading-[35px]'>
                     Kirim anak-anak untuk bertualang bersama karakter favorit mereka di dunia yang dibuat khusus untuk mereka—gratis dengan keanggotaanmu.
                     </p>
